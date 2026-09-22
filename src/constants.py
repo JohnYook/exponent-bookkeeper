@@ -1,0 +1,31 @@
+# categories
+FOOD_BEV = "Food & beverage"
+UTILITIES = "Utilities"
+REPAIRS = "Repairs & maintenance"
+CLEANING = "Cleaning & supplies"
+SMALLWARE = "Smallwares & supplies"
+PAYROLL = "Payroll"
+HIRING = "Hiring"
+SOFTWARE = "Software"
+RENT = "Rent"
+CARD_SALES = "Card sales"
+DELIVERY = "Delivery sales"
+
+MERCHANT_CATEGORIES = {
+    "SYSCO": FOOD_BEV,
+    "US FOODS": FOOD_BEV,
+    "RESTAURANT DEPOT": FOOD_BEV,
+    "METRO GAS & ELECTRIC": UTILITIES,
+    "CITY WATER DEPT": UTILITIES,
+    "COMCAST BUSINESS": UTILITIES,
+    "HOME DEPOT": REPAIRS,
+    "ECOLAB": CLEANING,
+    "WEBSTAURANT STORE": SMALLWARE,
+    "GUSTO": PAYROLL,
+    "INDEED": HIRING,
+    "7SHIFTS": SOFTWARE,
+    "MAINLINE PROPERTIES": RENT,
+    "TOAST PAYOUT": CARD_SALES,
+    "DOORDASH PAYOUT": DELIVERY,
+    "UBER EATS PAYOUT": DELIVERY,
+}
