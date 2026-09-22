@@ -15,7 +15,7 @@ class TransactionType(StrEnum):
 
 class Category(StrEnum):
     FOOD_BEV = "Food & beverage"
-    UTILITIES = "Utilies"
+    UTILITIES = "Utilities"
     REPAIRS = "Repairs & maintenance"
     CLEANING = "Cleaning & supplies"
     SMALLWARE = "Smallwares & supplies"

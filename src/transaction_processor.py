@@ -18,7 +18,7 @@ class TransactionProcessor:
         account = fields[3].upper()
         merchant = fields[4].upper()
         memo = fields[5].upper()
-        amount = float(fields[6])
+        amount = Decimal(fields[6])
 
         self.enter_transaction(
             transaction_id = transaction_id,
@@ -78,4 +78,4 @@ class TransactionProcessor:
                 category = entry["category"]
                 amount = entry["amount"]
                 needs_review = entry["needs_review"]
-                file.write(f"{id},{date},{transaction_type},{category},{amount},{needs_review}\n")
+                file.write(f"{id},{date},{transaction_type},{category},{amount},{needs_review.lower()}\n")
