@@ -1,7 +1,7 @@
 from enum import StrEnum
 
 
-class AccountType(strEnum):
+class AccountType(StrEnum):
     CARD = "CARD"
     BANK = "BANK"
 
@@ -14,9 +14,9 @@ class TransactionType(StrEnum):
 
 
 class Category(StrEnum):
-    FOOD_BEV = "Food & Beverage"
+    FOOD_BEV = "Food & beverage"
     UTILITIES = "Utilies"
-    REPAIRS = "Repairs & Maintenance"
+    REPAIRS = "Repairs & maintenance"
     CLEANING = "Cleaning & supplies"
     SMALLWARE = "Smallwares & supplies"
     PAYROLL = "Payroll"

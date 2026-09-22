@@ -15,3 +15,4 @@ with open(sys.argv[1]) as input_file:
         transaction_processor.process(line)
 
     transaction_processor.write_out_ledger()
+    
