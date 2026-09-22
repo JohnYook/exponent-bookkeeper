@@ -1,31 +1,35 @@
-# categories
-FOOD_BEV = "Food & beverage"
-UTILITIES = "Utilities"
-REPAIRS = "Repairs & maintenance"
-CLEANING = "Cleaning & supplies"
-SMALLWARE = "Smallwares & supplies"
-PAYROLL = "Payroll"
-HIRING = "Hiring"
-SOFTWARE = "Software"
-RENT = "Rent"
-CARD_SALES = "Card sales"
-DELIVERY = "Delivery sales"
+from enum import StrEnum
+
+
+class Category(StrEnum):
+    FOOD_BEV = "Food & Beverage"
+    UTILITIES = "Utilies"
+    REPAIRS = "Repairs & Maintenance"
+    CLEANING = "Cleaning & supplies"
+    SMALLWARE = "Smallwares & supplies"
+    PAYROLL = "Payroll"
+    HIRING = "Hiring"
+    SOFTWARE = "Software"
+    RENT = "Rent"
+    CARD_SALES = "Card sales"
+    DELIVERY = "Delivery sales"
+
 
 MERCHANT_CATEGORIES = {
-    "SYSCO": FOOD_BEV,
-    "US FOODS": FOOD_BEV,
-    "RESTAURANT DEPOT": FOOD_BEV,
-    "METRO GAS & ELECTRIC": UTILITIES,
-    "CITY WATER DEPT": UTILITIES,
-    "COMCAST BUSINESS": UTILITIES,
-    "HOME DEPOT": REPAIRS,
-    "ECOLAB": CLEANING,
-    "WEBSTAURANT STORE": SMALLWARE,
-    "GUSTO": PAYROLL,
-    "INDEED": HIRING,
-    "7SHIFTS": SOFTWARE,
-    "MAINLINE PROPERTIES": RENT,
-    "TOAST PAYOUT": CARD_SALES,
-    "DOORDASH PAYOUT": DELIVERY,
-    "UBER EATS PAYOUT": DELIVERY,
+    "SYSCO": Category.FOOD_BEV,
+    "US FOODS": Category.FOOD_BEV,
+    "RESTAURANT DEPOT": Category.FOOD_BEV,
+    "METRO GAS & ELECTRIC": Category.UTILITIES,
+    "CITY WATER DEPT": Category.UTILITIES,
+    "COMCAST BUSINESS": Category.UTILITIES,
+    "HOME DEPOT": Category.REPAIRS,
+    "ECOLAB": Category.CLEANING,
+    "WEBSTAURANT STORE": Category.SMALLWARE,
+    "GUSTO": Category.PAYROLL,
+    "INDEED": Category.HIRING,
+    "7SHIFTS": Category.SOFTWARE,
+    "MAINLINE PROPERTIES": Category.RENT,
+    "TOAST PAYOUT": Category.CARD_SALES,
+    "DOORDASH PAYOUT": Category.DELIVERY,
+    "UBER EATS PAYOUT": Category.DELIVERY,
 }
