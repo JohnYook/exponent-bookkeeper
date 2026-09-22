@@ -10,7 +10,8 @@ with open(sys.argv[1]) as input_file:
     transaction_processor = TransactionProcessor()
 
     for line in input_file:
-        # TODO: add real code to process line by line
+        if line.startswith("id,sync_batch,date"):
+            continue
         transaction_processor.process(line)
 
     transaction_processor.write_out_ledger()
