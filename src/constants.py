@@ -1,6 +1,18 @@
 from enum import StrEnum
 
 
+class AccountType(strEnum):
+    CARD = "CARD"
+    BANK = "BANK"
+
+
+class TransactionType(StrEnum):
+    PURCHASE = "purchase"
+    REFUND = "refund"
+    DEPOSIT = "deposit"
+    TRANSFER = "transfer"
+
+
 class Category(StrEnum):
     FOOD_BEV = "Food & Beverage"
     UTILITIES = "Utilies"
@@ -13,6 +25,7 @@ class Category(StrEnum):
     RENT = "Rent"
     CARD_SALES = "Card sales"
     DELIVERY = "Delivery sales"
+    UNCATEGORIZED = "Uncategorized"
 
 
 MERCHANT_CATEGORIES = {

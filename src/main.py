@@ -13,4 +13,4 @@ with open(sys.argv[1]) as input_file:
         # TODO: add real code to process line by line
         transaction_processor.process(line)
 
-    print(transaction_processor.get_ledger())
+    transaction_processor.write_out_ledger()
