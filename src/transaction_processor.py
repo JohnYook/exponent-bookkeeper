@@ -1,4 +1,5 @@
 import constants
+from decimal import Decimal
 
 class TransactionProcessor:
     merchant_categories = constants.MERCHANT_CATEGORIES
@@ -78,4 +79,4 @@ class TransactionProcessor:
                 category = entry["category"]
                 amount = entry["amount"]
                 needs_review = entry["needs_review"]
-                file.write(f"{id},{date},{transaction_type},{category},{amount},{needs_review.lower()}\n")
+                file.write(f"{id},{date},{transaction_type},{category},{amount},{str(needs_review).lower()}\n")
