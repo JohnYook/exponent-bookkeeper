@@ -35,7 +35,10 @@ class TransactionProcessor:
     def enter_transaction(self, *, transaction_id, batch, date, account, merchant, memo, amount):
         if transaction_id not in self.ledger or self.ledger[transaction_id]['batch'] < batch:
             transaction_type, type_needs_review = self.determine_type(account, memo, amount)
-            category, cat_needs_review = self.get_category(merchant)
+            if transaction_type == constants.TransactionType.TRANSFER:
+                category, cat_needs_review = constants.Category.TRANSFER, False
+            else:
+                category, cat_needs_review = self.get_category(merchant)
 
             self.ledger[transaction_id]  = {
                 'batch': batch,
