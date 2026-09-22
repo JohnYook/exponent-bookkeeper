@@ -25,6 +25,7 @@ class Category(StrEnum):
     RENT = "Rent"
     CARD_SALES = "Card sales"
     DELIVERY = "Delivery sales"
+    TRANSFER = "Transfer"
     UNCATEGORIZED = "Uncategorized"
 
 
